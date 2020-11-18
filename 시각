@@ -1,0 +1,18 @@
+n=3
+
+count=0
+for i in range(n+1):
+    for j in range(60):
+        for k in range(60):
+            if '3' in str(i)+str(j)+str(k):
+                count+=1
+print(count)
+
+
+for 의 특징을 잘 파악해야만 한다.
+
+86,400 가지 모든 경우의 수에서
+
+각 시각에 3이 하나라도 존재하면
+
+count 를 1씩 증가시킨다.
