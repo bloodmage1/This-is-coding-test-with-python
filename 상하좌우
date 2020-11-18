@@ -1,0 +1,31 @@
+n=5
+
+x,y=1,1
+move=['r','l','u','d']
+
+dx=(0,0,-1,1)
+dy=(1,-1,0,0)
+
+plans=['r','r','r','u','d','d']
+
+for plan in plans:
+    for i in range(len(move)):
+        if plan == move[i]:
+            nx=x+dx[i]
+            ny=y+dy[i]
+    if nx<1 or nx>n or ny<1 or ny>n:
+        continue
+    x,y=nx,ny
+print(x,y)
+
+
+1. 우선 맵의 크기를 n*m으로 잡는다.
+2. move 를 정하고 그것의 경우의 수를 dx, dy 로 잡는다.
+
+3. 샘플을 plans 로 잡고 순서대로 대입시키고 그것을 for 로 잡고 모든 경우의 수를 잡는다.
+4. plan 과 move에 따라서 nx,ny 를 설정하고 대입한다.
+5. 맵 n*m 을 넘어가면 continue 한다. or n*m 안에서만 이동이 가능하게 한다.
+
+6. x,y 를 nx, ny 에 대입한다.
+7. x,y 를 프린트한다.
+
